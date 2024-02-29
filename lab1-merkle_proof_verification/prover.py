@@ -60,12 +60,11 @@ def gen_merkle_proof(leaves, pos):
     level_pos = pos    # local copy of pos
 
     for level in range(height):
-        #######  YOUR CODE GOES HERE                              ######
-        #######     to hash internal nodes in the tree use the    ######
-        #######     function hash_internal_node(left,right)       ######
+        # get sibling position and its hash (merkle proof)
         sibling_pos = level_pos ^ 1
         if sibling_pos < len(state):
             path.append(state[sibling_pos])
+        # update leaves and its position of the next level
         state = [hash_internal_node(state[i], state[i+1]) for i in range(0, len(state), 2)]
         level_pos = level_pos // 2
         
