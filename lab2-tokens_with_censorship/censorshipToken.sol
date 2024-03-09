@@ -9,9 +9,6 @@ contract censorshipToken is ERC20 {
 
   mapping (address => bool) public blacklisted_address;
 
-  // error declaration for blacklisted transfer
-  error CST_BlacklistedSender(address sender);
-  error CST_BlacklistedReceiver(address receiver);
 
   constructor() ERC20("CensorshipToken", "CST") {
     // set to the deployer of the contract upon deployment
