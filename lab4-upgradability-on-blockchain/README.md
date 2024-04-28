@@ -39,6 +39,7 @@ $ npx hardhat run scripts/{filename}.js --network zircuit
 ## Contract Results
 
 ### Test Coverage
-
+<img width="870" alt="schematic" src="https://github.com/justin01010/BDaF/blob/main/lab4-upgradability-on-blockchain/image/testCoverage.png">
 
 ### Gas Report
+<img width="870" alt="schematic" src="https://github.com/justin01010/BDaF/blob/main/lab4-upgradability-on-blockchain/image/gasReport.png">
