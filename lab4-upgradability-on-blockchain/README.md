@@ -1,13 +1,44 @@
-# Sample Hardhat Project
+# Bdaf lab4
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a Hardhat Ignition module that deploys that contract.
-
-Try running some of the following tasks:
-
-```shell
-npx hardhat help
-npx hardhat test
-REPORT_GAS=true npx hardhat test
-npx hardhat node
-npx hardhat ignition deploy ./ignition/modules/Lock.js
+## Usage
+Install dependencies:
 ```
+$ npm i
+```
+
+Compile smart contract:
+```
+$ npx hardhat compile
+```
+
+Test script in ```test/proxy.test.js``` & retrieve gas-report
+```
+$ npx hardhat test
+```
+
+Get test coverage:
+```
+$ npx hardhat coverage
+```
+
+### Contract Deployment & Interaction:
+Deploy contract:
+```
+$ npx hardhat run deploy/deploy.js --network zircuit
+```
+Verify contract:
+```
+$ npx hardhat verify --network zircuit {CONTRACT_ADDRESS}
+```
+Interact with contract:
+- add interaction scripts in ```scripts/```
+```
+$ npx hardhat run scripts/{filename}.js --network zircuit
+```
+
+## Contract Results
+
+### Test Coverage
+
+
+### Gas Report

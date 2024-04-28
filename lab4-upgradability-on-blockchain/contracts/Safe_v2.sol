@@ -19,7 +19,7 @@ contract Safe_v2 is Safe {
         console.log("           Deposit: %s deposited %s token, %s token in total", msg.sender, amount, balances[msg.sender][token]);
     }
 
-    function takeFee(address token) override external view _onlyOwner(msg.sender){
+    function takeFee(address token) override external _onlyOwner(msg.sender){
         revert('takeFee() is banned');
     }
 }
